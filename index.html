@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="./style/main.css" />
+		<title>Frontend Mentor | GitHub user search app</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<span>devfinder</span>
+			</div>
+			<div class="theme">
+				<input
+					type="checkbox"
+					name="theme"
+					id="theme"
+					aria-label="Theme button"
+				/>
+				<span>LIGHT</span>
+			</div>
+		</header>
+		<main>
+			<form id="username-search-form">
+				<label for="username">Enter your name</label>
+				<input
+					type="text"
+					name="username"
+					id="username"
+					placeholder="Search GitHub username..."
+				/>
+				<input type="submit" value="Search" aria-label="submit search" />
+			</form>
+			<!-- User Layout -->
+			<div>
+				<div>
+					<!-- User profile -->
+					<div><img src="./assets/icon-search.svg" alt="User profile" /></div>
+					<!-- User profile information, handle, date -->
+					<div>
+						<div>
+							<p>The Octocat</p>
+							<p>@octocat</p>
+						</div>
+						<div>Joined 25 Jan 2011</div>
+					</div>
+				</div>
+				<!-- User Bio -->
+				<div>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+						odio. Quisque volutpat mattis eros.
+					</p>
+				</div>
+				<!-- User Repos, Followers, Followings -->
+				<div>
+					<div>
+						<div>Repos</div>
+						<div>8</div>
+					</div>
+					<div>
+						<div>Followers</div>
+						<div>3938</div>
+					</div>
+					<div>
+						<div>Following</div>
+						<div>9</div>
+					</div>
+				</div>
+				<!-- User Location, Twitter, Blog, Work -->
+				<div>
+					<div>
+						<img src="./assets/icon-location.svg" alt="Location" />
+						<span>San Francisco</span>
+					</div>
+					<div>
+						<img src="./assets/icon-website.svg" alt="Website" />
+						<a
+							href="https://github.blog
+            "
+							>http://github.blog</a
+						>
+					</div>
+					<div>
+						<img src="./assets/icon-twitter.svg" alt="Twitter" />
+						<span>Not Available</span>
+					</div>
+					<div>
+						<img src="./assets/icon-company.svg" alt="Company" />
+						<span>@github</span>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="./script/app.js"></script>
+	</body>
+</html>
