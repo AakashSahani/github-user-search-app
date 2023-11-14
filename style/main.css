@@ -17,6 +17,15 @@
 	--color-black-variant-2: #1e2a47;
 }
 
+.theme-light {
+	--color-primary: var(--color-white-variant-1);
+	--color-secondary: var(--color-black);
+}
+.theme-dark {
+	--color-primary: var(--color-black);
+	--color-secondary: var(--color-white);
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -82,11 +91,48 @@ h6 {
 
 /* Utilities */
 
+/* Theme Implementation */
+.theme-container {
+	display: flex;
+	flex-flow: row;
+	width: fit-content;
+	position: relative;
+}
+
+/* Checkbox */
+/* Moved checkbox behind label and changed appearance to none */
+.theme-container input[type='checkbox'] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	appearance: none;
+	z-index: -1;
+}
+
+.theme-container label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	z-index: inherit;
+	padding: 0.25rem;
+}
+
+.theme-container label img {
+	object-fit: contain;
+}
+
+.theme-container label:hover {
+	cursor: pointer;
+}
+
 /* Main Styling */
 body {
 	font-size: 1.5rem;
 	font-family: 'Space Mono', monospace;
 	padding: 1rem;
+	background-color: var(--color-primary);
+	color: var(--color-secondary);
 }
 
 @media (prefers-color-scheme: dark) {
