@@ -48,6 +48,66 @@
 				/>
 				<input type="submit" value="Search" aria-label="submit search" />
 			</form>
+			<div id="github-profile-container">
+			<div>
+				<div>
+					<!-- User profile -->
+					<div><img src="./assets/icon-search.svg" alt="User profile" /></div>
+					<!-- User profile information, handle, date -->
+					<div>
+						<div>
+							<p>${gitUserData.name}</p>
+							<p${gitUserData.location}</p>
+						</div>
+						<div>Joined ${gitUserData.created_at}</div>
+					</div>
+				</div>
+				<!-- User Bio -->
+				<div>
+					<p>
+						${gitUserData.bio}
+					</p>
+				</div>
+				<!-- User Repos, Followers, Followings -->
+				<div>
+					<div>
+						<div>Repos</div>
+						<div>${gitUserData.public_repos}</div>
+					</div>
+					<div>
+						<div>Followers</div>
+						<div>${gitUserData.followers}</div>
+					</div>
+					<div>
+						<div>Following</div>
+						<div>${gitUserData.following}</div>
+					</div>
+				</div>
+				<!-- User Location, Twitter, Blog, Work -->
+				<div>
+					<div>
+						<img src="./assets/icon-location.svg" alt="Location" />
+						<span>${gitUserData.location}</span>
+					</div>
+					<div>
+						<img src="./assets/icon-website.svg" alt="Website" />
+						<a
+							href="https://github.blog
+            "
+							>${gitUserData.blog}</a
+						>
+					</div>
+					<div>
+						<img src="./assets/icon-twitter.svg" alt="Twitter" />
+						<span>Not Available</span>
+					</div>
+					<div>
+						<img src="./assets/icon-company.svg" alt="Company" />
+						<span>@github</span>
+					</div>
+				</div>
+			</div>
+			</div>
 		</main>
 		<script src="./script/app.js"></script>
 	</body>
