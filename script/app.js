@@ -16,54 +16,80 @@ userSearchForm.addEventListener('submit', (e) => {
 				<!-- User profile information, handle, date -->
 				<div>
 					<div>
-						<p>${gitUserData.name}</p>
-						<p${gitUserData.location}</p>
+						<p>${gitUserData.name == null ? 'Not available' : gitUserData.name}</p>
+						<p${gitUserData.location == null ? 'Not available' : gitUserData.location}</p>
 					</div>
-					<div>Joined ${gitUserData.created_at}</div>
+					<div>${
+						gitUserData.created_at == null
+							? 'Not available'
+							: 'Joined ' + new Date(gitUserData.created_at).toDateString()
+					}</div>
 				</div>
 			</div>
 			<!-- User Bio -->
 			<div>
 				<p>
-					${gitUserData.bio}
+					${gitUserData.bio == null ? 'Not available' : gitUserData.bio}
 				</p>
 			</div>
 			<!-- User Repos, Followers, Followings -->
 			<div>
 				<div>
 					<div>Repos</div>
-					<div>${gitUserData.public_repos}</div>
+					<div>${
+						gitUserData.public_repos == null
+							? 'Not available'
+							: gitUserData.public_repos
+					}</div>
 				</div>
 				<div>
 					<div>Followers</div>
-					<div>${gitUserData.followers}</div>
+					<div>${
+						gitUserData.followers == null
+							? 'Not available'
+							: gitUserData.followers
+					}</div>
 				</div>
 				<div>
 					<div>Following</div>
-					<div>${gitUserData.following}</div>
+					<div>${
+						gitUserData.following == null
+							? 'Not available'
+							: gitUserData.following
+					}</div>
 				</div>
 			</div>
 			<!-- User Location, Twitter, Blog, Work -->
 			<div>
 				<div>
 					<img src="./assets/icon-location.svg" alt="Location" />
-					<span>${gitUserData.location}</span>
+					<span>${
+						gitUserData.location == null
+							? 'Not available'
+							: gitUserData.location
+					}</span>
 				</div>
 				<div>
 					<img src="./assets/icon-website.svg" alt="Website" />
 					<a
-						href="https://github.blog
+						href="${gitUserData.blog == null ? '#' : gitUserData.blog}
 					"
-						>${gitUserData.blog}</a
+						>${gitUserData.blog == null ? 'Not available' : gitUserData.blog}</a
 					>
 				</div>
 				<div>
 					<img src="./assets/icon-twitter.svg" alt="Twitter" />
-					<span>Not Available</span>
+					<span>${
+						gitUserData.twitter_username == null
+							? 'Not available'
+							: gitUserData.twitter_username
+					}</span>
 				</div>
 				<div>
 					<img src="./assets/icon-company.svg" alt="Company" />
-					<span>@github</span>
+					<span>${
+						gitUserData.company == null ? 'Not available' : gitUserData.company
+					}</span>
 				</div>
 			</div>
 		</div>
