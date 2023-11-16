@@ -9,21 +9,28 @@ userSearchForm.addEventListener('submit', (e) => {
 	let userInfo = getUserInfo(userName.value);
 	userInfo.then((gitUserData) => {
 		let userProfileTemplate = `
-		<div>
-			<div>
+			<div id="user-info">
 				<!-- User profile -->
-				<div><img src="./assets/icon-search.svg" alt="User profile" /></div>
+				<div id="user-profile"><img src="${
+					gitUserData.avatar_url
+				}" alt="User profile" /></div>
 				<!-- User profile information, handle, date -->
-				<div>
+				<div id="user-text">
 					<div>
-						<p>${gitUserData.name == null ? 'Not available' : gitUserData.name}</p>
-						<p${gitUserData.location == null ? 'Not available' : gitUserData.location}</p>
+						<strong>${
+							gitUserData.name == null ? 'Not available' : gitUserData.name
+						}</strong>
+						<span>${
+							gitUserData.location == null
+								? 'Not available'
+								: gitUserData.location
+						}</span>
 					</div>
-					<div>${
+					<span>${
 						gitUserData.created_at == null
 							? 'Not available'
 							: 'Joined ' + new Date(gitUserData.created_at).toDateString()
-					}</div>
+					}</span>
 				</div>
 			</div>
 			<!-- User Bio -->
@@ -33,34 +40,34 @@ userSearchForm.addEventListener('submit', (e) => {
 				</p>
 			</div>
 			<!-- User Repos, Followers, Followings -->
-			<div>
+			<div id="repo-info">
 				<div>
-					<div>Repos</div>
-					<div>${
+					<span>Repos</span>
+					<strong>${
 						gitUserData.public_repos == null
 							? 'Not available'
 							: gitUserData.public_repos
-					}</div>
+					}</strong>
 				</div>
 				<div>
-					<div>Followers</div>
-					<div>${
+					<span>Followers</span>
+					<strong>${
 						gitUserData.followers == null
 							? 'Not available'
 							: gitUserData.followers
-					}</div>
+					}</strong>
 				</div>
 				<div>
-					<div>Following</div>
-					<div>${
+					<span>Following</span>
+					<strong>${
 						gitUserData.following == null
 							? 'Not available'
 							: gitUserData.following
-					}</div>
+					}</strong>
 				</div>
 			</div>
 			<!-- User Location, Twitter, Blog, Work -->
-			<div>
+			<div id="location-info>
 				<div>
 					<img src="./assets/icon-location.svg" alt="Location" />
 					<span>${
@@ -91,9 +98,8 @@ userSearchForm.addEventListener('submit', (e) => {
 						gitUserData.company == null ? 'Not available' : gitUserData.company
 					}</span>
 				</div>
-			</div>
-		</div>
-`;
+			</div>`;
+		console.log(gitUserData);
 		githubMainContainer.innerHTML = userProfileTemplate;
 	});
 });

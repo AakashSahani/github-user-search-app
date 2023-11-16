@@ -48,65 +48,70 @@
 				/>
 				<input type="submit" value="Search" aria-label="submit search" />
 			</form>
+
 			<div id="github-profile-container">
-			<div>
-				<div>
+				<div id="user-info">
 					<!-- User profile -->
-					<div><img src="./assets/icon-search.svg" alt="User profile" /></div>
+					<div id="user-profile">
+						<img
+							src="https://avatars.githubusercontent.com/u/583231?v=4"
+							alt="User profile"
+						/>
+					</div>
 					<!-- User profile information, handle, date -->
-					<div>
+					<div id="user-text">
 						<div>
-							<p>${gitUserData.name}</p>
-							<p${gitUserData.location}</p>
+							<strong>The Octocat</strong>
+							<span>@octocat</span>
 						</div>
-						<div>Joined ${gitUserData.created_at}</div>
+						<span>Joined Tue Jan 25 2011</span>
 					</div>
 				</div>
 				<!-- User Bio -->
 				<div>
 					<p>
-						${gitUserData.bio}
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+						excepturi eos aut
 					</p>
 				</div>
 				<!-- User Repos, Followers, Followings -->
-				<div>
+				<div id="repo-info">
 					<div>
-						<div>Repos</div>
-						<div>${gitUserData.public_repos}</div>
+						<span>Repos</span>
+						<strong>8</strong>
 					</div>
 					<div>
-						<div>Followers</div>
-						<div>${gitUserData.followers}</div>
+						<span>Followers</span>
+						<strong>11109</strong>
 					</div>
 					<div>
-						<div>Following</div>
-						<div>${gitUserData.following}</div>
+						<span>Following</span>
+						<strong>9</strong>
 					</div>
 				</div>
 				<!-- User Location, Twitter, Blog, Work -->
-				<div>
+				<div id="location-info">
 					<div>
 						<img src="./assets/icon-location.svg" alt="Location" />
-						<span>${gitUserData.location}</span>
+						<span>San Francisco</span>
 					</div>
 					<div>
 						<img src="./assets/icon-website.svg" alt="Website" />
 						<a
 							href="https://github.blog
-            "
-							>${gitUserData.blog}</a
+					"
+							>https://github.blog</a
 						>
 					</div>
 					<div>
 						<img src="./assets/icon-twitter.svg" alt="Twitter" />
-						<span>Not Available</span>
+						<span>Not available</span>
 					</div>
 					<div>
 						<img src="./assets/icon-company.svg" alt="Company" />
 						<span>@github</span>
 					</div>
 				</div>
-			</div>
 			</div>
 		</main>
 		<script src="./script/app.js"></script>

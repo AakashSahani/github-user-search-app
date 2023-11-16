@@ -128,12 +128,113 @@ h6 {
 
 /* Main Styling */
 body {
-	font-size: 1.5rem;
+	font-size: 1rem;
 	font-family: 'Space Mono', monospace;
 	padding: 1rem;
 	background-color: var(--color-primary);
 	color: var(--color-secondary);
 }
 
+#user-profile {
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	border-radius: 50%;
+}
+
+#user-profile > img {
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+#github-profile-container {
+	display: flex;
+	flex-flow: column;
+	margin: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 1px 1px var(--color-white);
+	background-color: var(--color-white);
+	justify-content: center;
+	align-items: flex-start;
+	padding: 2rem;
+	gap: 1rem;
+}
+
+#github-profile-container > * {
+	width: 100%;
+}
+
+#user-info {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.25rem;
+	gap: 1rem;
+}
+
+#user-text,
+#user-text div {
+	display: flex;
+	text-align: left;
+	flex-flow: column;
+}
+
+#user-text div strong {
+	color: var(--color-black-variant-1);
+	font-weight: 700;
+}
+
+#user-text > span {
+	color: var(--color-grey);
+}
+
+#user-text div span {
+	color: var(--color-blue);
+	font-size: 0.9rem;
+}
+
+#repo-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-flow: row;
+	text-align: center;
+	padding: 1rem;
+	gap: 1rem;
+	border-radius: 0.75rem;
+	background-color: var(--color-white-variant-1);
+}
+
+#repo-info span {
+	color: var(--color-light-blue);
+	font-weight: 400;
+	font-size: 0.9rem;
+}
+
+#repo-info strong {
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: var(--color-black-variant-1);
+}
+
+#location-info {
+	display: flex;
+	flex-flow: column;
+	gap: 1rem;
+}
+
+#location-info > div {
+	display: flex;
+	flex-flow: row;
+	gap: 1rem;
+}
+
 @media (prefers-color-scheme: dark) {
+}
+
+@media (min-width: 1080px) {
 }
