@@ -20,10 +20,14 @@
 .theme-light {
 	--color-primary: var(--color-white-variant-1);
 	--color-secondary: var(--color-black);
+	--color-profile-layout-font: var(--color-light-blue);
+	--color-profile-layout-background: var(--color-white);
 }
 .theme-dark {
 	--color-primary: var(--color-black);
 	--color-secondary: var(--color-white);
+	--color-profile-layout-font: var(--color-white);
+	--color-profile-layout-background: var(--color-black-variant-2);
 }
 
 /*
@@ -155,8 +159,9 @@ body {
 	flex-flow: column;
 	margin: 1rem;
 	border-radius: 1rem;
-	box-shadow: 0 0 1px 1px var(--color-white);
-	background-color: var(--color-white);
+	box-shadow: 0 0 1px 1px var(--color-profile-layout-background);
+	background-color: var(--color-profile-layout-background);
+	color: var(--color-profile-layout-font);
 	justify-content: center;
 	align-items: flex-start;
 	padding: 2rem;
@@ -206,7 +211,8 @@ body {
 	padding: 1rem;
 	gap: 1rem;
 	border-radius: 0.75rem;
-	background-color: var(--color-white-variant-1);
+	background-color: var(--color-primary);
+	color: var(--color-profile-layout-font);
 }
 
 #repo-info span {
