@@ -21,9 +21,9 @@ userSearchForm.addEventListener('submit', (e) => {
 							gitUserData.name == null ? 'Not available' : gitUserData.name
 						}</strong>
 						<span>${
-							gitUserData.location == null
+							gitUserData.login == null
 								? 'Not available'
-								: gitUserData.location
+								: '@' + gitUserData.login
 						}</span>
 					</div>
 					<span>${
