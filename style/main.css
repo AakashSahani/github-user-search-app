@@ -139,6 +139,17 @@ body {
 	color: var(--color-secondary);
 }
 
+/* Header */
+header {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1rem;
+	padding: 1rem;
+	font-weight: bold;
+}
+
 #user-profile {
 	width: 70px;
 	height: 70px;
@@ -154,9 +165,9 @@ body {
 	border-radius: 50%;
 }
 
+#username-search-form,
 #github-profile-container {
 	display: flex;
-	flex-flow: column;
 	margin: 1rem;
 	border-radius: 1rem;
 	box-shadow: 0 0 1px 1px var(--color-profile-layout-background);
@@ -166,6 +177,31 @@ body {
 	align-items: flex-start;
 	padding: 2rem;
 	gap: 1rem;
+}
+
+#username-search-form {
+	flex-flow: row;
+	align-items: center;
+	padding: 0.5rem;
+}
+
+#username-search-form input[type='text'] {
+	margin: 0;
+	flex: 1;
+	border: none;
+	background: transparent;
+}
+
+#username-search-form input[type='submit'] {
+	background-color: #0079ff;
+	color: white;
+	padding: 1rem;
+	border: none;
+	border-radius: 1rem;
+}
+
+#github-profile-container {
+	flex-flow: column;
 }
 
 #github-profile-container > * {
@@ -237,10 +273,4 @@ body {
 	display: flex;
 	flex-flow: row;
 	gap: 1rem;
-}
-
-@media (prefers-color-scheme: dark) {
-}
-
-@media (min-width: 1080px) {
 }
