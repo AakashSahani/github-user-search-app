@@ -190,6 +190,7 @@ header {
 	flex: 1;
 	border: none;
 	background: transparent;
+	color: var(--color-profile-layout-font);
 }
 
 #username-search-form input[type='submit'] {
@@ -225,7 +226,7 @@ header {
 }
 
 #user-text div strong {
-	color: var(--color-black-variant-1);
+	color: var(--color-profile-layout-font);
 	font-weight: 700;
 }
 
@@ -252,7 +253,6 @@ header {
 }
 
 #repo-info span {
-	color: var(--color-light-blue);
 	font-weight: 400;
 	font-size: 0.9rem;
 }
@@ -260,7 +260,6 @@ header {
 #repo-info strong {
 	font-weight: bold;
 	font-size: 1.2rem;
-	color: var(--color-black-variant-1);
 }
 
 #location-info {
@@ -273,4 +272,10 @@ header {
 	display: flex;
 	flex-flow: row;
 	gap: 1rem;
+	color: var(--color-profile-layout-font);
+}
+
+#website-info > a {
+	text-decoration: none;
+	color: var(--color-profile-layout-font);
 }
